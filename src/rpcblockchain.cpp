@@ -44,7 +44,7 @@ double GetDifficulty(const CBlockIndex* blockindex)
 }
 
 
-// PoSV
+// PoS:D -- Note, retain PoSV name because nothing different here from Reddcoin's PoSV implementation
 double GetPoSVKernelPS()
 {
     if (pindexBest == NULL || pindexBest->nHeight <= LAST_POW_BLOCK || !pindexBest->IsProofOfStake())

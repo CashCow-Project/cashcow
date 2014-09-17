@@ -267,7 +267,7 @@ static const CRPCCommand vRPCCommands[] =
     { "listlockunspent",        &listlockunspent,        false,     false,      true },
     { "verifychain",            &verifychain,            true,      false,      false },
     { "getunconfirmedbalance",  &getunconfirmedbalance,  false,     false,      true },
-    // posv
+    // pos:d
     { "getstakinginfo",         &getstakinginfo,         true,      false,      false },
     { "getcheckpoint",          &getcheckpoint,          true,      true,       false },
     { "reservebalance",         &reservebalance,         false,     false,      false },

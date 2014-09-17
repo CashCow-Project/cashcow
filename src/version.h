@@ -21,11 +21,11 @@ extern const std::string CLIENT_NAME;
 extern const std::string CLIENT_BUILD;
 extern const std::string CLIENT_DATE;
 
-// PoSV
+// PoS:D
 // database format versioning for checkpoints
 static const int DATABASE_VERSION = 80000;
 
-// PoSV
+// PoS:D
 // nTime field added to CTransaction
 // vchBlockSig field added to CBlock
 static const int POW_CLIENT_VERSION = 1020100;

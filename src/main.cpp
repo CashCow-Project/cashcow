@@ -687,9 +687,9 @@ bool CTxMemPool::accept(CValidationState &state, CTransaction &tx, bool fCheckIn
     if (tx.IsCoinStake())
         return state.DoS(100, error("CTxMemPool::accept() : coinstake as individual tx"));
 
-    // PoSV: refuse transactions with old versions
+    // PoS:D -- refuse transactions with old versions
     if(pindexBest->nHeight >= LAST_POW_BLOCK && tx.nVersion <= POW_TX_VERSION)
-        return state.DoS(100, error("CTxMemPool::accept() : tx with old pre-PoSV version"));
+        return state.DoS(100, error("CTxMemPool::accept() : tx with old pre-PoS:D version"));
 
     // To help v0.1.5 clients who would see it as a negative number
     if ((int64)tx.nLockTime > std::numeric_limits<int>::max())
@@ -1133,16 +1133,18 @@ int64 GetProofOfWorkReward(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-// ppcoin: miner's coin stake reward based on coin age spent (coin-days)
-int64 GetProofOfStakeReward(int64 nCoinAge, int64 nFees)
+// cashcow: miner's coin stake reward is definite like with Bitcoin's PoW
+int64 GetProofOfStakeReward(int nHeight, int64 nFees)
 {
-    // some scary rounding dirty trick here for leap / non-leap years
-    // CoinAge=365 -> nSubsidy=9993
-    // CoinAge=366 -> nSubsidy=10020
-    int64 nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
+    int64 nSubsidy = 120 * COIN; // 120 * 86400 * 365.25 / 72 = 52596000 or ~5.26% inflation in 1st year
+    
+    if (nHeight <= 12000) {
+        // After 10 days, full rewards start; small reward until then to get started
+        nSubsidy = 1 * COIN;
+    }
 
     if (fDebug && GetBoolArg("-printcreation"))
-        printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRI64d"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
+        printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRI64d"\n", FormatMoney(nSubsidy).c_str(), nHeight);
 
     return nSubsidy + nFees;
 }
@@ -1229,7 +1231,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
     }
     else if (fProofOfStake && (uint64)(BlockLastSolved->nHeight - LAST_POW_BLOCK) < PastBlocksMin)
     {
-        // difficulty is reset at the first PoSV blocks
+        // difficulty is reset at the first PoS:D blocks
         if (fTestNet)
             return bnProofOfStakeLimit.GetCompact();
         else
@@ -1830,7 +1832,7 @@ bool CBlock::ConnectBlock(CValidationState &state, CBlockIndex* pindex, CCoinsVi
         for (unsigned int i=fProofOfStake ? 1 : 0; i<vtx.size(); i++) {
             uint256 hash = GetTxHash(i);
             if (fDebug)
-                printf("CBlock::ConnectBlock : nHeight=%u, PoSV=%d, vts=%u\n", pindex->nHeight, fProofOfStake, i);
+                printf("CBlock::ConnectBlock : nHeight=%u, PoS:D=%d, vts=%u\n", pindex->nHeight, fProofOfStake, i);
             if (view.HaveCoins(hash) && !view.GetCoins(hash).IsPruned())
                 return state.DoS(100, error("ConnectBlock() : tried to overwrite transaction"));
         }
@@ -1921,12 +1923,7 @@ bool CBlock::ConnectBlock(CValidationState &state, CBlockIndex* pindex, CCoinsVi
     }
     else if (IsProofOfStake())
     {
-        // ppcoin: coin stake tx earns reward instead of paying fee
-        uint64 nCoinAge;
-        if (!vtx[1].GetCoinAge(nCoinAge))
-            return state.DoS(100, error("ConnectBlock() : %s unable to get coin age for coinstake", vtx[1].GetHash().ToString().substr(0,10).c_str()));
-
-        int64 nCalculatedStakeReward = GetProofOfStakeReward(nCoinAge, nFees);
+        int64 nCalculatedStakeReward = GetProofOfStakeReward(pindex->nHeight, nFees);
         if (nStakeReward > nCalculatedStakeReward)
             return state.DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%"PRI64d" vs calculated=%"PRI64d")", nStakeReward, nCalculatedStakeReward));
     }
@@ -2171,6 +2168,9 @@ bool SetBestChain(CValidationState &state, CBlockIndex* pindexNew)
     return true;
 }
 
+/* Coin age is retained in CashCow for statistical purposes.  It may be of interest to see
+   the equivalent coin age spent for staking or otherwise.  It does not factor into the 
+   weighting or reward */
 // ppcoin: total coin age spent in transaction, in the unit of coin-days.
 // Only those coins meeting minimum age requirement counts. As those
 // transactions not in main chain are not currently indexed so we

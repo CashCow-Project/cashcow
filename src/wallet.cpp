@@ -23,13 +23,12 @@ typedef vector<unsigned char> valtype;
 
 // we split the coinstake output in two to avoid concentrating
 // too many coins in one output. currently almost always split.
-unsigned int nStakeSplitAge = 45 * 24 * 60 * 60; // 45 days
-// avoid concentrated transactions. on average, each block contains:
-// generated interest  ~= 27b * 5% / 365 / 1440 ~= 2.5k
-// corresponding stake ~= 27b / 365 / 1440 ~= 50k
+unsigned int nStakeSplitAge = 10 * 24 * 60 * 60; // 10 days
+// avoid concentrated transactions. each block contains 120 COW
+// corresponding stake ~= 1b / 365.25 / 1200 ~= 2282 COW
 // optimally each output stakes once every week so 50k * 52 = 2.6m
 // but only a fraction of the total money supply is staked on the network
-int64 nStakeCombineThreshold = 2000000 * COIN;
+int64 nStakeCombineThreshold = 100000 * COIN;
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -448,7 +447,7 @@ bool CWallet::AddToWallet(const CWalletTx& wtxIn)
 
                     unsigned int& blocktime = mapBlockIndex[wtxIn.hashBlock]->nTime;
                     wtx.nTimeSmart = std::max(latestEntry, std::min(blocktime, latestNow));
-                    // PoSV: for old transactions, set the nTime to block time
+                    // PoS:D -- for old transactions, set the nTime to block time
                     if (wtx.nTime == 0)
                         wtx.nTime = blocktime;
                 }
@@ -1506,12 +1505,12 @@ bool CWallet::GetStakeWeight(const CKeyStore& keystore, uint64& nAverageWeight, 
         unsigned int nTimeTx = tx.nTime ? tx.nTime : mapBlockIndex[hashBlock]->nTime;
 
         int64 nTimeWeight = GetCoinAgeWeight((int64)nTimeTx, (int64)GetTime());
-        CBigNum bnCoinDayWeight = CBigNum(pcoin.first->vout[pcoin.second].nValue) * nTimeWeight / COIN / (24 * 60 * 60);
+        CBigNum bnCoinWeight = CBigNum(pcoin.first->vout[pcoin.second].nValue);
 
         // Weight is greater than zero
         if (nTimeWeight > 0)
         {
-            nTotalWeight += bnCoinDayWeight.getuint64();
+            nTotalWeight += bnCoinWeight.getuint64();
             nWeightCount++;
         }
     }
@@ -1525,8 +1524,8 @@ bool CWallet::GetStakeWeight(const CKeyStore& keystore, uint64& nAverageWeight, 
 bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int64 nSearchInterval, int64 nFees, CTransaction& txNew, CKey& key)
 {
     CBlockIndex* pindexPrev = pindexBest;
-    CBigNum bnTargetPerCoinDay;
-    bnTargetPerCoinDay.SetCompact(nBits);
+    CBigNum bnTargetPerCoin;
+    bnTargetPerCoin.SetCompact(nBits);
 
     txNew.vin.clear();
     txNew.vout.clear();
@@ -1707,13 +1706,9 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
         }
     }
 
-    // Calculate coin age reward
+    // Calculate staking reward
     {
-        uint64 nCoinAge;
-        if (!txNew.GetCoinAge(nCoinAge))
-            return error("CreateCoinStake : failed to calculate coin age");
-
-        int64 nReward = GetProofOfStakeReward(nCoinAge, nFees);
+        int64 nReward = GetProofOfStakeReward(pindexBest->nHeight, nFees);
         if (nReward <= 0)
             return false;
 

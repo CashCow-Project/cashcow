@@ -140,7 +140,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn)
     else
     {
         if (fDebug)
-            printf("CreateNewBlock : new PoSV block\n");
+            printf("CreateNewBlock : new PoS:D block\n");
 
         // Height first in coinbase required for block.version=2
         txNew.vin[0].scriptSig = (CScript() << pindexPrev->nHeight+1) + COINBASE_FLAGS;
@@ -191,7 +191,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn)
 
             if (fProofOfStake && tx.nVersion <= POW_TX_VERSION)
             {
-                // In PoSV blocks, stop processing transactions of older versions.
+                // In PoS:D blocks, stop processing transactions of older versions.
                 continue;
             }
             else if (!fProofOfStake && tx.nVersion > POW_TX_VERSION)
@@ -644,7 +644,7 @@ void static CashCowMiner(CWallet *pwallet)
             return;
         CBlock *pblock = &pblocktemplate->block;
 
-        // exit if received a PoSV block template
+        // exit if received a PoS:D block template
         if (pblock->vtx[0].vout[0].IsEmpty())
         {
             printf("CashCowMiner : no more PoW blocks\n");
@@ -773,7 +773,7 @@ void GenerateCashCows(bool fGenerate, CWallet* pwallet)
 
     minerThreads = new boost::thread_group();
 
-    // start one thread for PoSV minting
+    // start one thread for PoS:D minting
     minerThreads->create_thread(boost::bind(&StakeMiner, pwallet));
 
     int nThreads = GetArg("-genproclimit", 0);

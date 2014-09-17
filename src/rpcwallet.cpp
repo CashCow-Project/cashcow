@@ -1617,7 +1617,7 @@ Value reservebalance(const Array& params, bool fHelp)
     return result;
 }
 
-// posv: interest received
+// pos:d -- interest received
 Value getinterest(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() > 2)

@@ -14,10 +14,10 @@ using namespace std;
 
 typedef std::map<int, uint64> MapModifierCheckpoints;
 
-// This leads to a modifier selection interval of 27489 seconds,
-// which is roughly 7 hours 38 minutes, just a bit shorter than
-// the minimum stake age of 8 hours.
-unsigned int nModifierInterval = 13 * 60;
+// This leads to a modifier selection interval of 33864 seconds,
+// which is roughly 9 hours 24 minutes, just a bit shorter than
+// the minimum stake age of 10 hours.
+unsigned int nModifierInterval = 16 * 60;
 
 // FIXME
 // Hard checkpoints of stake modifiers to ensure they are deterministic
@@ -37,62 +37,12 @@ static std::map<int, uint64> mapStakeModifierCheckpointsTestNet =
     ;
 
 // linear coin-aging function
-int64 GetCoinAgeWeightLinear(int64 nIntervalBeginning, int64 nIntervalEnd)
+int64 GetCoinAgeWeight(int64 nIntervalBeginning, int64 nIntervalEnd)
 {
     // Kernel hash weight starts from 0 at the min age
     // this change increases active coins participating the hash and helps
     // to secure the network when proof-of-stake difficulty is low
     return max((int64)0, min(nIntervalEnd - nIntervalBeginning - nStakeMinAge, (int64)nStakeMaxAge));
-}
-
-/* PoSV: Coin-aging function
- * =================================================
- * WARNING
- * =================================================
- * The parameters used in this function are the
- * solutions to a set of intricate mathematical
- * equations chosen specifically to incentivise
- * owners of CashCow to participate in minting.
- * These parameters are also affected by the values
- * assigned to other variables such as expected
- * block confirmation time.
- * If you are merely forking the source code of
- * CashCow, it's highly UNLIKELY that this set of
- * parameters work for your purpose. In particular,
- * if you have tweaked the values of other variables,
- * this set of parameters are certainly no longer
- * valid. You should revert back to the linear
- * function above or the security of your network
- * will be significantly impaired.
- * In short, do not use or change this function
- * unless you have spoken to the author.
- * =================================================
- * DO NOT USE OR CHANGE UNLESS YOU ABSOLUTELY
- * KNOW WHAT YOU ARE DOING.
- * =================================================
- */
-int64 GetCoinAgeWeight(int64 nIntervalBeginning, int64 nIntervalEnd)
-{
-    if (nIntervalBeginning <= 0)
-    {
-        printf("WARNING *** GetCoinAgeWeight: nIntervalBeginning (%"PRI64d") <= 0\n", nIntervalBeginning);
-        return 0;
-    }
-
-    int64 nSeconds = max((int64)0, nIntervalEnd - nIntervalBeginning - nStakeMinAge);
-    double days = double(nSeconds) / (24 * 60 * 60);
-    double weight = 0;
-
-    if (days <= 7)
-    {
-        weight = -0.00408163 * pow(days, 3) + 0.05714286 * pow(days, 2) + days;
-    }
-    else
-    {
-        weight = 8.4 * log(days) - 7.94564525;
-    }
-
-    return min((int64)(weight * 24 * 60 * 60), (int64)nStakeMaxAge);
 }
 
 // Get the last stake modifier and its generation time from a given block
@@ -308,7 +258,7 @@ static bool GetKernelStakeModifier(uint256 hashBlockFrom, uint64& nStakeModifier
     return true;
 }
 
-// ppcoin kernel protocol
+// cashcow kernel protocol (similar to BlackCoin PoS 2.0 but separate implementation)
 // coinstake must meet hash target according to the protocol:
 // kernel (input 0) must meet the formula
 //     hash(nStakeModifier + txPrev.block.nTime + txPrev.offset + txPrev.nTime + txPrev.vout.n + nTime) < bnTarget * nCoinDayWeight
@@ -344,12 +294,13 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock& blockFrom, unsigned 
     if (nTimeBlockFrom + nStakeMinAge > nTimeTx) // Min age requirement
         return error("CheckStakeKernelHash() : min age violation");
 
-    CBigNum bnTargetPerCoinDay;
-    bnTargetPerCoinDay.SetCompact(nBits);
+    CBigNum bnTargetPerCoin;
+    bnTargetPerCoin.SetCompact(nBits);
+    
     int64 nValueIn = txPrev.vout[prevout.n].nValue;
     uint256 hashBlockFrom = blockFrom.GetHash();
-    CBigNum bnCoinDayWeight = CBigNum(nValueIn) * GetCoinAgeWeight((int64)nTimeTxPrev, (int64)nTimeTx) / COIN / (24 * 60 * 60);
-    targetProofOfStake = (bnCoinDayWeight * bnTargetPerCoinDay).getuint256();
+    CBigNum bnCoinWeight = CBigNum(nValueIn);
+    targetProofOfStake = (bnCoinWeight * bnTargetPerCoin).getuint256();
 
     // Calculate hash
     CDataStream ss(SER_GETHASH, 0);
@@ -377,7 +328,7 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock& blockFrom, unsigned 
     }
 
     // Now check if proof-of-stake hash meets target protocol
-    if (CBigNum(hashProofOfStake) > bnCoinDayWeight * bnTargetPerCoinDay)
+    if (CBigNum(hashProofOfStake) > bnCoinWeight * bnTargetPerCoin)
         return false;
     if (fDebug && !fPrintProofOfStake)
     {
@@ -393,6 +344,7 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock& blockFrom, unsigned 
     }
     return true;
 }
+
 
 // Check kernel hash target and coinstake signature
 bool CheckProofOfStake(const CTransaction& tx, unsigned int nBits, uint256& hashProofOfStake, uint256& targetProofOfStake)

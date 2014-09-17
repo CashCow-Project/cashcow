@@ -78,9 +78,8 @@ static const int fHaveUPnP = false;
 inline int64 PastDrift(int64 nTime)   { return nTime - 10 * 60; } // up to 10 minutes from the past
 inline int64 FutureDrift(int64 nTime) { return nTime + 10 * 60; } // up to 10 minutes from the future
 
-// CashCow PoSV
+// CashCow PoS:D
 static const int LAST_POW_BLOCK = 1000; // POW for first 1000 blocks, then POS; POW Rewards only blocks 1-4.
-static const int64 COIN_YEAR_REWARD = 5 * CENT; // 5% per year
 
 extern CScript COINBASE_FLAGS;
 
@@ -118,7 +117,7 @@ extern int nScriptCheckThreads;
 extern bool fTxIndex;
 extern unsigned int nCoinCacheSize;
 
-// CashCow PoSV
+// CashCow PoS:D
 extern std::set<std::pair<COutPoint, unsigned int> > setStakeSeen;
 extern unsigned int nStakeMinAge;
 extern unsigned int nStakeMaxAge;
@@ -212,8 +211,8 @@ bool VerifySignature(const CTransaction& txFrom, const CTransaction& txTo, unsig
 /** Abort with a message */
 bool AbortNode(const std::string &msg);
 
-// CashCow PoSV
-int64 GetProofOfStakeReward(int64 nCoinAge, int64 nFees);
+// CashCow PoS:D
+int64 GetProofOfStakeReward(int nHeight, int64 nFees);
 int64 GetProofOfWorkReward(int nHeight, int64 nFees);
 unsigned int ComputeMinStake(unsigned int nBase, int64 nTime);
 uint256 WantedByOrphan(const CBlock* pblockOrphan);
