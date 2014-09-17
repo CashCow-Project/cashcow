@@ -1147,7 +1147,7 @@ int64 GetProofOfStakeReward(int64 nCoinAge, int64 nFees)
     return nSubsidy + nFees;
 }
 
-const int64 nTargetSpacing = 60; // CashCow: 1 minute block
+const int64 nTargetSpacing = 72; // CashCow: 1.2 minute block
 static const int64 nTargetTimespan = 60 * 60; // CashCow: Not used
 
 //
