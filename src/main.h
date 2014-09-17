@@ -54,11 +54,11 @@ static const unsigned int UNDOFILE_CHUNK_SIZE = 0x100000; // 1 MiB
 /** Fake height value used in CCoins to signify they are only in the memory pool (since 0.8) */
 static const unsigned int MEMPOOL_HEIGHT = 0x7FFFFFFF;
 /** Dust Soft Limit, allowed with additional fee per output */
-static const int64 DUST_SOFT_LIMIT = 100000000; // 1 COW
+static const int64 DUST_SOFT_LIMIT = 1 * COIN; // 1 COW
 /** Dust Hard Limit, ignored as wallet inputs (mininput default) */
-static const int64 DUST_HARD_LIMIT = 1000000;   // 0.01 COW mininput
+static const int64 DUST_HARD_LIMIT = 1 * CENT;   // 0.01 COW mininput
 /** No amount larger than this (in satoshi) is valid */
-static const int64 MAX_MONEY = 92233720368 * COIN; // Maximum or compile warning, will fix in future release.
+static const int64 MAX_MONEY = 10000000000 * COIN; // Max 10 billion coins (virtually uncapped)
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
 static const int COINBASE_MATURITY = 30;
@@ -79,7 +79,7 @@ inline int64 PastDrift(int64 nTime)   { return nTime - 10 * 60; } // up to 10 mi
 inline int64 FutureDrift(int64 nTime) { return nTime + 10 * 60; } // up to 10 minutes from the future
 
 // CashCow PoSV
-static const int LAST_POW_BLOCK = 260800 - 1;
+static const int LAST_POW_BLOCK = 1000; // POW for first 1000 blocks, then POS; POW Rewards only blocks 1-4.
 static const int64 COIN_YEAR_REWARD = 5 * CENT; // 5% per year
 
 extern CScript COINBASE_FLAGS;
@@ -214,7 +214,7 @@ bool AbortNode(const std::string &msg);
 
 // CashCow PoSV
 int64 GetProofOfStakeReward(int64 nCoinAge, int64 nFees);
-int64 GetBlockValue(int nHeight, int64 nFees);
+int64 GetProofOfWorkReward(int nHeight, int64 nFees);
 unsigned int ComputeMinStake(unsigned int nBase, int64 nTime);
 uint256 WantedByOrphan(const CBlock* pblockOrphan);
 const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfStake);

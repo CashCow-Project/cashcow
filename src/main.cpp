@@ -1117,28 +1117,17 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
     return pblockOrphan->hashPrevBlock;
 }
 
-int64 GetBlockValue(int nHeight, int64 nFees)
+// POW only used to mine the initial coins for the free distribution.
+int64 GetProofOfWorkReward(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 100000 * COIN;
-
+    int64 nSubsidy = 0 * COIN;
+    
     if (nHeight == 0) {
-        // Genesis block
-        nSubsidy = 10000 * COIN;
-    } else if (nHeight < 11) {
-        // Premine: First 10 block are 545,000,000 RDD (5% of the total coin)
-        nSubsidy = 545000000 * COIN;
-    } else if (nHeight < 10000) {
-        // Bonus reward for block 10-9,999 of 300,000 coins
-        nSubsidy = 300000 * COIN;
-    } else if (nHeight < 20000) {
-        // Bonus reward for block 10,000 - 19,999 of 200,000 coins
-        nSubsidy = 200000 * COIN;
-    } else if (nHeight < 30000) {
-        // Bonus reward for block 20,000 - 29,999 of 150,000 coins
-        nSubsidy = 150000 * COIN;
-    } else if (nHeight >= 140000) {
-      // Subsidy is cut in half every 50,000 blocks starting at block 140000
-      nSubsidy >>= ((nHeight - 140000 + 50000) / 50000);
+        // Genesis Block
+        nSubsidy = 0;
+    } else if (nHeight < 5) {
+        // Free Distribution Coins: 250 million COW per block, 4 blocks.
+        250000000 * COIN;
     }
 
     return nSubsidy + nFees;
@@ -1927,8 +1916,8 @@ bool CBlock::ConnectBlock(CValidationState &state, CBlockIndex* pindex, CCoinsVi
     if (IsProofOfWork())
     {
         // Check coinbase reward
-        if (vtx[0].GetValueOut() > GetBlockValue(pindex->nHeight, nFees))
-            return state.DoS(100, error("ConnectBlock() : coinbase pays too much (actual=%"PRI64d" vs limit=%"PRI64d")", vtx[0].GetValueOut(), GetBlockValue(pindex->nHeight, nFees)));
+        if (vtx[0].GetValueOut() > GetProofOfWorkReward(pindex->nHeight, nFees))
+            return state.DoS(100, error("ConnectBlock() : coinbase pays too much (actual=%"PRI64d" vs limit=%"PRI64d")", vtx[0].GetValueOut(), GetProofOfWorkReward(pindex->nHeight, nFees)));
     }
     else if (IsProofOfStake())
     {

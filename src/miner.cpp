@@ -370,7 +370,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn)
             printf("CreateNewBlock(): total size %"PRI64u"\n", nBlockSize);
 
         if (!fProofOfStake)
-            pblock->vtx[0].vout[0].nValue = GetBlockValue(pindexPrev->nHeight+1, nFees);
+            pblock->vtx[0].vout[0].nValue = GetProofOfWorkReward(pindexPrev->nHeight+1, nFees);
 
         pblocktemplate->vTxFees[0] = -nFees;
 
