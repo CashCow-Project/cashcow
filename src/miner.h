@@ -1,11 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2013 The NovaCoin developers
-// Copyright (c) 2014 The ReddCoin developers
+// Copyright (c) 2014 The Reddcoin developers
+// Copyright (c) 2014 The CashCow developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef REDDCOIN_MINER_H
-#define REDDCOIN_MINER_H
+#ifndef CASHCOW_MINER_H
+#define CASHCOW_MINER_H
 
 #include <stdint.h>
 
@@ -17,7 +18,7 @@ class CScript;
 class CWallet;
 
 /** Run the miner threads */
-void GenerateReddcoins(bool fGenerate, CWallet* pwallet);
+void GenerateCashCows(bool fGenerate, CWallet* pwallet);
 /* Generate a new block, without valid proof-of-work */
 CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn);
 CBlockTemplate* CreateNewBlockWithKey(CReserveKey& reservekey);
@@ -32,4 +33,4 @@ bool CheckStake(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey);
 /** Base sha256 mining transform */
 void SHA256Transform(void* pstate, void* pinput, const void* pinit);
 
-#endif // REDDCOIN_MINER_H
+#endif // CASHCOW_MINER_H

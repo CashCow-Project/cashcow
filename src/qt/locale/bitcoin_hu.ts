@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Reddcoin</source>
-        <translation>A Reddcoinról</translation>
+        <source>About CashCow</source>
+        <translation>A CashCowról</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Reddcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Reddcoin&lt;/b&gt; verzió</translation>
+        <source>&lt;b&gt;CashCow&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;CashCow&lt;/b&gt; verzió</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,7 +33,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+0"/>
-        <source>The Reddcoin developers</source>
+        <source>The CashCow developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -66,8 +66,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Reddcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Ezekkel a Reddcoin-címekkel fogadhatod kifizetéseket. Érdemes lehet minden egyes kifizető számára külön címet létrehozni, hogy könnyebben nyomon követhesd, kitől kaptál már pénzt.</translation>
+        <source>These are your CashCow addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Ezekkel a CashCow-címekkel fogadhatod kifizetéseket. Érdemes lehet minden egyes kifizető számára külön címet létrehozni, hogy könnyebben nyomon követhesd, kitől kaptál már pénzt.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,7 +81,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Reddcoin address</source>
+        <source>Sign a message to prove you own a CashCow address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -106,8 +106,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Reddcoin address</source>
-        <translation>Üzenet ellenőrzése, hogy valóban a megjelölt Reddcoin címekkel van-e aláírva.</translation>
+        <source>Verify a message to ensure it was signed with a specified CashCow address</source>
+        <translation>Üzenet ellenőrzése, hogy valóban a megjelölt CashCow címekkel van-e aláírva.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -121,7 +121,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Reddcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your CashCow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -247,8 +247,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REDDCOINS&lt;/b&gt;!</source>
-        <translation>Figyelem: Ha kódolod a tárcát, és elveszíted a jelszavad, akkor &lt;b&gt;AZ ÖSSZES REDDCOINODAT IS EL FOGOD VESZÍTENI!&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CASHCOWS&lt;/b&gt;!</source>
+        <translation>Figyelem: Ha kódolod a tárcát, és elveszíted a jelszavad, akkor &lt;b&gt;AZ ÖSSZES CASHCOWODAT IS EL FOGOD VESZÍTENI!&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -274,8 +274,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="-56"/>
-        <source>Reddcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your reddcoins from being stolen by malware infecting your computer.</source>
-        <translation>Reddcoin will close now to finish the encryption process. Ne feledd, hogy a tárca titkosítása sem nyújt teljes védelmet az adathalász programok fertőzésével szemben.</translation>
+        <source>CashCow will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your cashcows from being stolen by malware infecting your computer.</source>
+        <translation>CashCow will close now to finish the encryption process. Ne feledd, hogy a tárca titkosítása sem nyújt teljes védelmet az adathalász programok fertőzésével szemben.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -373,8 +373,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Reddcoin</source>
-        <translation>Információk a Reddcoinról</translation>
+        <source>Show information about CashCow</source>
+        <translation>Információk a CashCowról</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -418,13 +418,13 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Reddcoin address</source>
+        <source>Send coins to a CashCow address</source>
         <translation>Érmék küldése megadott címre</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Reddcoin</source>
-        <translation>Reddcoin konfigurációs opciók</translation>
+        <source>Modify configuration options for CashCow</source>
+        <translation>CashCow konfigurációs opciók</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -454,8 +454,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Reddcoin</source>
-        <translation>Reddcoin</translation>
+        <source>CashCow</source>
+        <translation>CashCow</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -479,8 +479,8 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Reddcoin</source>
-        <translation>&amp;A Reddcoinról</translation>
+        <source>&amp;About CashCow</source>
+        <translation>&amp;A CashCowról</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -499,13 +499,13 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Reddcoin addresses to prove you own them</source>
-        <translation>Üzenet aláírása a Reddcoin címmel, amivel bizonyítja, hogy a cím az ön tulajdona.</translation>
+        <source>Sign messages with your CashCow addresses to prove you own them</source>
+        <translation>Üzenet aláírása a CashCow címmel, amivel bizonyítja, hogy a cím az ön tulajdona.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Reddcoin addresses</source>
-        <translation>Annak ellenőrzése, hogy az üzenetek valóban a megjelölt Reddcoin címekkel vannak-e alaírva</translation>
+        <source>Verify messages to ensure they were signed with specified CashCow addresses</source>
+        <translation>Annak ellenőrzése, hogy az üzenetek valóban a megjelölt CashCow címekkel vannak-e alaírva</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -535,13 +535,13 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location line="+47"/>
-        <source>Reddcoin client</source>
-        <translation>Reddcoin kliens</translation>
+        <source>CashCow client</source>
+        <translation>CashCow kliens</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Reddcoin network</source>
-        <translation><numerusform>%n aktív kapcsolat a Reddcoin-hálózattal</numerusform><numerusform>%n aktív kapcsolat a Reddcoin-hálózattal</numerusform></translation>
+        <source>%n active connection(s) to CashCow network</source>
+        <translation><numerusform>%n aktív kapcsolat a CashCow-hálózattal</numerusform><numerusform>%n aktív kapcsolat a CashCow-hálózattal</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,7 +655,7 @@ Cím: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Reddcoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid CashCow address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -670,7 +670,7 @@ Cím: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Reddcoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. CashCow can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -736,8 +736,8 @@ Cím: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Reddcoin address.</source>
-        <translation>A megadott &quot;%1&quot; cím nem egy érvényes Reddcoin-cím.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid CashCow address.</source>
+        <translation>A megadott &quot;%1&quot; cím nem egy érvényes CashCow-cím.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,7 +755,7 @@ Cím: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Reddcoin-Qt</source>
+        <source>CashCow-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -819,12 +819,12 @@ Cím: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Reddcoin after logging in to the system.</source>
-        <translation>Induljon el a Reddcoin a számítógép bekapcsolásakor</translation>
+        <source>Automatically start CashCow after logging in to the system.</source>
+        <translation>Induljon el a CashCow a számítógép bekapcsolásakor</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Reddcoin on system login</source>
+        <source>&amp;Start CashCow on system login</source>
         <translation>&amp;Induljon el a számítógép bekapcsolásakor</translation>
     </message>
     <message>
@@ -844,8 +844,8 @@ Cím: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Reddcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>A Reddcoin-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
+        <source>Automatically open the CashCow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>A CashCow-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -854,8 +854,8 @@ Cím: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Reddcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>SOCKS proxyn keresztüli csatlakozás a Reddcoin hálózatához (pl. Tor-on keresztüli csatlakozás esetén)</translation>
+        <source>Connect to the CashCow network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>SOCKS proxyn keresztüli csatlakozás a CashCow hálózatához (pl. Tor-on keresztüli csatlakozás esetén)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -929,7 +929,7 @@ Cím: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Reddcoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting CashCow.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -944,7 +944,7 @@ Cím: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Reddcoin addresses in the transaction list or not.</source>
+        <source>Whether to show CashCow addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -996,8 +996,8 @@ Cím: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Reddcoin.</source>
-        <translation>Ez a beállítás a Reddcoin ujraindítása után lép érvénybe.</translation>
+        <source>This setting will take effect after restarting CashCow.</source>
+        <translation>Ez a beállítás a CashCow ujraindítása után lép érvénybe.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1015,8 +1015,8 @@ Cím: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Reddcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a Reddcoin hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CashCow network after a connection is established, but this process has not completed yet.</source>
+        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a CashCow hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1069,7 +1069,7 @@ Cím: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start reddcoin: click-to-pay handler</source>
+        <source>Cannot start cashcow: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1219,7 +1219,7 @@ Cím: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Reddcoin-Qt help message to get a list with possible Reddcoin command-line options.</source>
+        <source>Show the CashCow-Qt help message to get a list with possible CashCow command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1239,12 +1239,12 @@ Cím: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Reddcoin - Debug window</source>
+        <source>CashCow - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>Reddcoin Core</source>
+        <source>CashCow Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1254,7 +1254,7 @@ Cím: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Reddcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the CashCow debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1264,7 +1264,7 @@ Cím: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Reddcoin RPC console.</source>
+        <source>Welcome to the CashCow RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1365,7 +1365,7 @@ Cím: %4
     <message>
         <location line="+5"/>
         <source>The amount exceeds your balance.</source>
-        <translation>Nincs ennyi reddcoin az egyenlegeden.</translation>
+        <translation>Nincs ennyi cashcow az egyenlegeden.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1449,8 +1449,8 @@ Cím: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Reddcoin address (starts with R)</source>
-        <translation>Adj meg egy Reddcoin-címet (pl.: Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2 )</translation>
+        <source>Enter a CashCow address (starts with R)</source>
+        <translation>Adj meg egy CashCow-címet (pl.: Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2 )</translation>
     </message>
 </context>
 <context>
@@ -1473,7 +1473,7 @@ Cím: %4
     <message>
         <location line="+18"/>
         <source>The address to sign the message with (starts with R)</source>
-        <translation>Adj meg egy Reddcoin-címet (pl.: Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2 )</translation>
+        <translation>Adj meg egy CashCow-címet (pl.: Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2 )</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1514,7 +1514,7 @@ Cím: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Reddcoin address</source>
+        <source>Sign the message to prove you own this CashCow address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1546,11 +1546,11 @@ Cím: %4
     <message>
         <location line="+21"/>
         <source>The address the message was signed with (starts with R)</source>
-        <translation>Adj meg egy Reddcoin-címet (pl.: Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2 )</translation>
+        <translation>Adj meg egy CashCow-címet (pl.: Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2 )</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Reddcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified CashCow address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1566,8 +1566,8 @@ Cím: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Reddcoin address (starts with R)</source>
-        <translation>Adj meg egy Reddcoin-címet (pl.: Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2 )</translation>
+        <source>Enter a CashCow address (starts with R)</source>
+        <translation>Adj meg egy CashCow-címet (pl.: Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2 )</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1576,8 +1576,8 @@ Cím: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Reddcoin signature</source>
-        <translation>Adja meg a Reddcoin aláírást</translation>
+        <source>Enter CashCow signature</source>
+        <translation>Adja meg a CashCow aláírást</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1650,7 +1650,7 @@ Cím: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Reddcoin developers</source>
+        <source>The CashCow developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2188,8 +2188,8 @@ Cím: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>Reddcoin version</source>
-        <translation>Reddcoin verzió</translation>
+        <source>CashCow version</source>
+        <translation>CashCow verzió</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2198,8 +2198,8 @@ Cím: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or reddcoind</source>
-        <translation>Parancs küldése a -serverhez vagy a reddcoindhez
+        <source>Send command to -server or cashcowd</source>
+        <translation>Parancs küldése a -serverhez vagy a cashcowdhez
 </translation>
     </message>
     <message>
@@ -2222,14 +2222,14 @@ Cím: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: reddcoin.conf)</source>
-        <translation>Konfigurációs fájl (alapértelmezett: reddcoin.conf)
+        <source>Specify configuration file (default: cashcow.conf)</source>
+        <translation>Konfigurációs fájl (alapértelmezett: cashcow.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: reddcoind.pid)</source>
-        <translation>pid-fájl (alapértelmezett: reddcoind.pid)
+        <source>Specify pid file (default: cashcowd.pid)</source>
+        <translation>pid-fájl (alapértelmezett: cashcowd.pid)
 </translation>
     </message>
     <message>
@@ -2311,13 +2311,13 @@ Cím: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=reddcoinrpc
+rpcuser=cashcowrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;CashCow Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2333,7 +2333,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Reddcoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. CashCow is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2378,8 +2378,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Reddcoin will not work properly.</source>
-        <translation>Figyelem: Ellenőrizd, hogy helyesen van-e beállítva a gépeden a dátum és az idő.  A Reddcoin nem fog megfelelően működni, ha rosszul van beállítvaaz órád.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CashCow will not work properly.</source>
+        <translation>Figyelem: Ellenőrizd, hogy helyesen van-e beállítva a gépeden a dátum és az idő.  A CashCow nem fog megfelelően működni, ha rosszul van beállítvaaz órád.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2628,8 +2628,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Reddcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL-opciók: (lásd a Reddcoin Wiki SSL-beállítási instrukcióit)</translation>
+        <source>SSL options: (see the CashCow Wiki for SSL setup instructions)</source>
+        <translation>SSL-opciók: (lásd a CashCow Wiki SSL-beállítási instrukcióit)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2829,13 +2829,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Reddcoin</source>
-        <translation>Hiba a wallet.dat betöltése közben: ehhez a tárcához újabb verziójú Reddcoin-kliens szükséges</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of CashCow</source>
+        <translation>Hiba a wallet.dat betöltése közben: ehhez a tárcához újabb verziójú CashCow-kliens szükséges</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Reddcoin to complete</source>
-        <translation>A Tárca újraírása szükséges: Indítsa újra a teljesen a Reddcoin-t</translation>
+        <source>Wallet needed to be rewritten: restart CashCow to complete</source>
+        <translation>A Tárca újraírása szükséges: Indítsa újra a teljesen a CashCow-t</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2880,7 +2880,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     <message>
         <location line="-6"/>
         <source>Insufficient funds</source>
-        <translation>Nincs elég reddcoinod.</translation>
+        <translation>Nincs elég cashcowod.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2894,8 +2894,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Reddcoin is probably already running.</source>
-        <translation>A %s nem elérhető ezen a gépen. A Reddcoin valószínűleg fut már.</translation>
+        <source>Unable to bind to %s on this computer. CashCow is probably already running.</source>
+        <translation>A %s nem elérhető ezen a gépen. A CashCow valószínűleg fut már.</translation>
     </message>
     <message>
         <location line="+64"/>

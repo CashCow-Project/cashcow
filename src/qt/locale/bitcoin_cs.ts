@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Reddcoin</source>
-        <translation>O Reddcoinu</translation>
+        <source>About CashCow</source>
+        <translation>O CashCowu</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Reddcoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Reddcoin&lt;/b&gt; verze</translation>
+        <source>&lt;b&gt;CashCow&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;CashCow&lt;/b&gt; verze</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -34,8 +34,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+0"/>
-        <source>The Reddcoin developers</source>
-        <translation>Vývojáři Reddcoinu</translation>
+        <source>The CashCow developers</source>
+        <translation>Vývojáři CashCowu</translation>
     </message>
 </context>
 <context>
@@ -67,8 +67,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Reddcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Tohle jsou tvé Reddcoinové adresy pro příjem plateb. Můžeš dát pokaždé každému plátci novou adresu, abys věděl, kdo ti kdy kolik platil.</translation>
+        <source>These are your CashCow addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Tohle jsou tvé CashCowové adresy pro příjem plateb. Můžeš dát pokaždé každému plátci novou adresu, abys věděl, kdo ti kdy kolik platil.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,8 +82,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Reddcoin address</source>
-        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem Reddcoinové adresy</translation>
+        <source>Sign a message to prove you own a CashCow address</source>
+        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem CashCowové adresy</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -107,8 +107,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Reddcoin address</source>
-        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou Reddcoinovou adresou</translation>
+        <source>Verify a message to ensure it was signed with a specified CashCow address</source>
+        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou CashCowovou adresou</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Reddcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tohle jsou tvé Reddcoinové adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
+        <source>These are your CashCow addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tohle jsou tvé CashCowové adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +248,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REDDCOINS&lt;/b&gt;!</source>
-        <translation>Varování: Pokud si zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY REDDCOINY&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CASHCOWS&lt;/b&gt;!</source>
+        <translation>Varování: Pokud si zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY CASHCOWY&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="-56"/>
-        <source>Reddcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your reddcoins from being stolen by malware infecting your computer.</source>
-        <translation>Reddcoin se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky úplně nezabraňuje krádeži tvých reddcoinů malwarem, kterým se může počítač nakazit.</translation>
+        <source>CashCow will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your cashcows from being stolen by malware infecting your computer.</source>
+        <translation>CashCow se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky úplně nezabraňuje krádeži tvých cashcowů malwarem, kterým se může počítač nakazit.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -374,8 +374,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Reddcoin</source>
-        <translation>Zobraz informace o Reddcoinu</translation>
+        <source>Show information about CashCow</source>
+        <translation>Zobraz informace o CashCowu</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Reddcoin address</source>
-        <translation>Pošli mince na Reddcoinovou adresu</translation>
+        <source>Send coins to a CashCow address</source>
+        <translation>Pošli mince na CashCowovou adresu</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Reddcoin</source>
-        <translation>Uprav nastavení Reddcoinu</translation>
+        <source>Modify configuration options for CashCow</source>
+        <translation>Uprav nastavení CashCowu</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Reddcoin</source>
-        <translation>Reddcoin</translation>
+        <source>CashCow</source>
+        <translation>CashCow</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Reddcoin</source>
-        <translation>O &amp;Reddcoinu</translation>
+        <source>&amp;About CashCow</source>
+        <translation>O &amp;CashCowu</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Reddcoin addresses to prove you own them</source>
-        <translation>Podepiš zprávy svými Reddcoinovými adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
+        <source>Sign messages with your CashCow addresses to prove you own them</source>
+        <translation>Podepiš zprávy svými CashCowovými adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Reddcoin addresses</source>
-        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými Reddcoinovými adresami</translation>
+        <source>Verify messages to ensure they were signed with specified CashCow addresses</source>
+        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými CashCowovými adresami</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v Open
     </message>
     <message>
         <location line="+47"/>
-        <source>Reddcoin client</source>
-        <translation>Reddcoin klient</translation>
+        <source>CashCow client</source>
+        <translation>CashCow klient</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Reddcoin network</source>
-        <translation><numerusform>%n aktivní spojení do Reddcoinové sítě</numerusform><numerusform>%n aktivní spojení do Reddcoinové sítě</numerusform><numerusform>%n aktivních spojení do Reddcoinové sítě</numerusform></translation>
+        <source>%n active connection(s) to CashCow network</source>
+        <translation><numerusform>%n aktivní spojení do CashCowové sítě</numerusform><numerusform>%n aktivní spojení do CashCowové sítě</numerusform><numerusform>%n aktivních spojení do CashCowové sítě</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -656,8 +656,8 @@ Adresa: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Reddcoin address or malformed URI parameters.</source>
-        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná Reddcoinová adresa nebo poškozené parametry URI.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid CashCow address or malformed URI parameters.</source>
+        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná CashCowová adresa nebo poškozené parametry URI.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -671,8 +671,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Reddcoin can no longer continue safely and will quit.</source>
-        <translation>Stala se fatální chyba. Reddcoin nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
+        <source>A fatal error occurred. CashCow can no longer continue safely and will quit.</source>
+        <translation>Stala se fatální chyba. CashCow nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
     </message>
 </context>
 <context>
@@ -737,8 +737,8 @@ Adresa: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Reddcoin address.</source>
-        <translation>Zadaná adresa &quot;%1&quot; není platná Reddcoinová adresa.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid CashCow address.</source>
+        <translation>Zadaná adresa &quot;%1&quot; není platná CashCowová adresa.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -756,8 +756,8 @@ Adresa: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Reddcoin-Qt</source>
-        <translation>Reddcoin-Qt</translation>
+        <source>CashCow-Qt</source>
+        <translation>CashCow-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -819,13 +819,13 @@ Adresa: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Reddcoin after logging in to the system.</source>
-        <translation>Automaticky spustí Reddcoin po přihlášení do systému.</translation>
+        <source>Automatically start CashCow after logging in to the system.</source>
+        <translation>Automaticky spustí CashCow po přihlášení do systému.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Reddcoin on system login</source>
-        <translation>S&amp;pustit Reddcoin po přihlášení do systému</translation>
+        <source>&amp;Start CashCow on system login</source>
+        <translation>S&amp;pustit CashCow po přihlášení do systému</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -844,7 +844,7 @@ Adresa: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Reddcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the CashCow client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automaticky otevře potřebný port na routeru. Tohle funguje jen za předpokladu, že tvůj router podporuje UPnP a že je UPnP povolené.</translation>
     </message>
     <message>
@@ -854,8 +854,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Reddcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Připojí se do Reddcoinové sítě přes SOCKS proxy (např. když se připojuje přes Tor).</translation>
+        <source>Connect to the CashCow network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Připojí se do CashCowové sítě přes SOCKS proxy (např. když se připojuje přes Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -929,8 +929,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Reddcoin.</source>
-        <translation>Tady lze nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartování Reddcoinu.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting CashCow.</source>
+        <translation>Tady lze nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartování CashCowu.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -944,8 +944,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Reddcoin addresses in the transaction list or not.</source>
-        <translation>Zda ukazovat reddcoinové adresy ve výpisu transakcí nebo ne.</translation>
+        <source>Whether to show CashCow addresses in the transaction list or not.</source>
+        <translation>Zda ukazovat cashcowové adresy ve výpisu transakcí nebo ne.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -996,8 +996,8 @@ Adresa: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Reddcoin.</source>
-        <translation>Nastavení se projeví až po restartování Reddcoinu.</translation>
+        <source>This setting will take effect after restarting CashCow.</source>
+        <translation>Nastavení se projeví až po restartování CashCowu.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1015,8 +1015,8 @@ Adresa: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Reddcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s Reddcoinovou sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CashCow network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s CashCowovou sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1069,8 +1069,8 @@ Adresa: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start reddcoin: click-to-pay handler</source>
-        <translation>Nemůžu spustit reddcoin: obsluha click-to-pay</translation>
+        <source>Cannot start cashcow: click-to-pay handler</source>
+        <translation>Nemůžu spustit cashcow: obsluha click-to-pay</translation>
     </message>
 </context>
 <context>
@@ -1219,8 +1219,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Reddcoin-Qt help message to get a list with possible Reddcoin command-line options.</source>
-        <translation>Seznam parametrů Reddcoinu pro příkazovou řádku získáš v nápovědě Reddcoinu Qt.</translation>
+        <source>Show the CashCow-Qt help message to get a list with possible CashCow command-line options.</source>
+        <translation>Seznam parametrů CashCowu pro příkazovou řádku získáš v nápovědě CashCowu Qt.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1239,13 +1239,13 @@ Adresa: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Reddcoin - Debug window</source>
-        <translation>Reddcoin - ladicí okno</translation>
+        <source>CashCow - Debug window</source>
+        <translation>CashCow - ladicí okno</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Reddcoin Core</source>
-        <translation>Jádro Reddcoinu</translation>
+        <source>CashCow Core</source>
+        <translation>Jádro CashCowu</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1254,8 +1254,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Reddcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otevři soubor s ladicími záznamy Reddcoinu z aktuálního datového adresáře. U velkých logů to může pár vteřin zabrat.</translation>
+        <source>Open the CashCow debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otevři soubor s ladicími záznamy CashCowu z aktuálního datového adresáře. U velkých logů to může pár vteřin zabrat.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1264,8 +1264,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Reddcoin RPC console.</source>
-        <translation>Vítej v Reddcoinové RPC konzoli.</translation>
+        <source>Welcome to the CashCow RPC console.</source>
+        <translation>Vítej v CashCowové RPC konzoli.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1448,8 +1448,8 @@ Adresa: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Reddcoin address (starts with R)</source>
-        <translation>Zadej Reddcoinovou adresu (starts with R)</translation>
+        <source>Enter a CashCow address (starts with R)</source>
+        <translation>Zadej CashCowovou adresu (starts with R)</translation>
     </message>
 </context>
 <context>
@@ -1513,8 +1513,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Reddcoin address</source>
-        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této Reddcoinové adresy</translation>
+        <source>Sign the message to prove you own this CashCow address</source>
+        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této CashCowové adresy</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1549,8 +1549,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Reddcoin address</source>
-        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou Reddcoinovou adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified CashCow address</source>
+        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou CashCowovou adresou</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1565,8 +1565,8 @@ Adresa: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Reddcoin address (starts with R)</source>
-        <translation>Zadej Reddcoinovou adresu (starts with R)</translation>
+        <source>Enter a CashCow address (starts with R)</source>
+        <translation>Zadej CashCowovou adresu (starts with R)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1575,8 +1575,8 @@ Adresa: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Reddcoin signature</source>
-        <translation>Vlož Reddcoinový podpis</translation>
+        <source>Enter CashCow signature</source>
+        <translation>Vlož CashCowový podpis</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1649,8 +1649,8 @@ Adresa: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Reddcoin developers</source>
-        <translation>Vývojáři Reddcoinu</translation>
+        <source>The CashCow developers</source>
+        <translation>Vývojáři CashCowu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2187,8 +2187,8 @@ Adresa: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>Reddcoin version</source>
-        <translation>Verze Reddcoinu</translation>
+        <source>CashCow version</source>
+        <translation>Verze CashCowu</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2197,8 +2197,8 @@ Adresa: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or reddcoind</source>
-        <translation>Poslat příkaz pro -server nebo reddcoind</translation>
+        <source>Send command to -server or cashcowd</source>
+        <translation>Poslat příkaz pro -server nebo cashcowd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2217,13 +2217,13 @@ Adresa: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: reddcoin.conf)</source>
-        <translation>Konfigurační soubor (výchozí: reddcoin.conf)</translation>
+        <source>Specify configuration file (default: cashcow.conf)</source>
+        <translation>Konfigurační soubor (výchozí: cashcow.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: reddcoind.pid)</source>
-        <translation>PID soubor (výchozí: reddcoind.pid)</translation>
+        <source>Specify pid file (default: cashcowd.pid)</source>
+        <translation>PID soubor (výchozí: cashcowd.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2300,24 +2300,24 @@ Adresa: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=reddcoinrpc
+rpcuser=cashcowrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;CashCow Alert&quot; admin@foo.com
 </source>
         <translation>%s, musíš nastavit rpcpassword v konfiguračním souboru:
 %s
 Je vhodné použít následující náhodné heslo:
-rpcuser=reddcoinrpc
+rpcuser=cashcowrpc
 rpcpassword=%s
 (není potřeba si ho pamatovat)
 rpcuser a rpcpassword NESMÍ být stejné.
 Pokud konfigurační soubor ještě neexistuje, vytvoř ho tak, aby ho mohl číst pouze vlastník.
 Je také doporučeno si nastavit alertnotify, abys byl upozorněn na případné problémy;
-například: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo.com
+například: alertnotify=echo %%s | mail -s &quot;CashCow Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2332,8 +2332,8 @@ například: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Reddcoin is probably already running.</source>
-        <translation>Nedaří se mi získat zámek na datový adresář %s. Reddcoin pravděpodobně už jednou běží.</translation>
+        <source>Cannot obtain a lock on data directory %s. CashCow is probably already running.</source>
+        <translation>Nedaří se mi získat zámek na datový adresář %s. CashCow pravděpodobně už jednou běží.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2377,8 +2377,8 @@ například: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Reddcoin will not work properly.</source>
-        <translation>Upozornění: Zkontroluj, že máš v počítači správně nastavený datum a čas! Pokud jsou nastaveny špatně, Reddcoin nebude fungovat správně.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CashCow will not work properly.</source>
+        <translation>Upozornění: Zkontroluj, že máš v počítači správně nastavený datum a čas! Pokud jsou nastaveny špatně, CashCow nebude fungovat správně.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2627,8 +2627,8 @@ například: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Reddcoin Wiki for SSL setup instructions)</source>
-        <translation>Možnosti SSL: (viz instrukce nastavení SSL v Reddcoin Wiki)</translation>
+        <source>SSL options: (see the CashCow Wiki for SSL setup instructions)</source>
+        <translation>Možnosti SSL: (viz instrukce nastavení SSL v CashCow Wiki)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2817,13 +2817,13 @@ například: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Reddcoin</source>
-        <translation>Chyba při načítání wallet.dat: peněženka vyžaduje novější verzi Reddcoinu</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of CashCow</source>
+        <translation>Chyba při načítání wallet.dat: peněženka vyžaduje novější verzi CashCowu</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Reddcoin to complete</source>
-        <translation>Soubor s peněženkou potřeboval přepsat: restartuj Reddcoin, aby se operace dokončila</translation>
+        <source>Wallet needed to be rewritten: restart CashCow to complete</source>
+        <translation>Soubor s peněženkou potřeboval přepsat: restartuj CashCow, aby se operace dokončila</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2882,8 +2882,8 @@ například: alertnotify=echo %%s | mail -s &quot;Reddcoin Alert&quot; admin@foo
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Reddcoin is probably already running.</source>
-        <translation>Nedaří se mi připojit na %s na tomhle počítači. Reddcoin už pravděpodobně jednou běží.</translation>
+        <source>Unable to bind to %s on this computer. CashCow is probably already running.</source>
+        <translation>Nedaří se mi připojit na %s na tomhle počítači. CashCow už pravděpodobně jednou běží.</translation>
     </message>
     <message>
         <location line="+64"/>

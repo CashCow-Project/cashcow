@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014 The Reddcoin developers
+// Copyright (c) 2014 The CashCow developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,7 +23,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "Reddcoin cannot be compiled without assertions."
+# error "CashCow cannot be compiled without assertions."
 #endif
 
 typedef vector<unsigned char> valtype;
@@ -42,7 +43,7 @@ unsigned int nTransactionsUpdated = 0;
 map<uint256, CBlockIndex*> mapBlockIndex;
 uint256 hashGenesisBlock("0xb868e0d95a3c3c0e0dadc67ee587aaf9dc8acbf99e3b4b3110fad4eb74c1decc");
 uint256 hashGenesisBlockTestNet("0x46db8d519c64586e3f0bf16153f61fdcf1d30b71ab159bf4a5b46dbcbc79d814");
-static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Reddcoin: starting difficulty is 1 / 2^12
+static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // CashCow: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 uint256 nBestChainWork = 0;
@@ -74,7 +75,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Reddcoin Signed Message:\n";
+const string strMessageMagic = "CashCow Signed Message:\n";
 
 double dHashesPerSec = 0.0;
 int64 nHPSTimerStart = 0;
@@ -374,7 +375,7 @@ unsigned int LimitOrphanTxSize(unsigned int nMaxOrphans)
 
 bool CTxOut::IsDust() const
 {
-    // Reddcoin: IsDust() detection disabled, allows any valid dust to be relayed.
+    // CashCow: IsDust() detection disabled, allows any valid dust to be relayed.
     // The fees imposed on each dust txo is considered sufficient spam deterrant.
     return false;
 }
@@ -637,7 +638,7 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
             nMinFee = 0;
     }
 
-    // Reddcoin
+    // CashCow
     // To limit dust spam, add nBaseFee for each output less than DUST_SOFT_LIMIT
     BOOST_FOREACH(const CTxOut& txout, vout)
         if (txout.nValue < DUST_SOFT_LIMIT)
@@ -1157,8 +1158,8 @@ int64 GetProofOfStakeReward(int64 nCoinAge, int64 nFees)
     return nSubsidy + nFees;
 }
 
-const int64 nTargetSpacing = 60; // Reddcoin: 1 minute block
-static const int64 nTargetTimespan = 60 * 60; // Reddcoin: Not used
+const int64 nTargetSpacing = 60; // CashCow: 1 minute block
+static const int64 nTargetTimespan = 60 * 60; // CashCow: Not used
 
 //
 // maximum nBits value could possible be required nTime after
@@ -1798,7 +1799,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("reddcoin-scriptch");
+    RenameThread("cashcow-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2638,7 +2639,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
 
 bool CBlockIndex::IsSuperMajority(int minVersion, const CBlockIndex* pstart, unsigned int nRequired, unsigned int nToCheck)
 {
-    // Reddcoin: temporarily disable v2 block lockin until we are ready for v2 transition
+    // CashCow: temporarily disable v2 block lockin until we are ready for v2 transition
     return false;
     unsigned int nFound = 0;
     for (unsigned int i = 0; i < nToCheck && nFound < nRequired && pstart != NULL; i++)
@@ -3615,7 +3616,7 @@ bool static AlreadyHave(const CInv& inv)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0xfb, 0xc0, 0xb6, 0xdb }; // Reddcoin: increase each by adding 2 to bitcoin's value.
+unsigned char pchMessageStart[4] = { 0xfb, 0xc0, 0xb6, 0xdb }; // CashCow: increase each by adding 2 to bitcoin's value.
 
 
 void static ProcessGetData(CNode* pfrom)

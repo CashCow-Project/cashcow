@@ -1,5 +1,6 @@
 // Copyright (c) 2012-2013 The PPCoin developers
 // Copyright (c) 2014 The Reddcoin developers
+// Copyright (c) 2014 The CashCow developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -51,12 +52,12 @@ int64 GetCoinAgeWeightLinear(int64 nIntervalBeginning, int64 nIntervalEnd)
  * The parameters used in this function are the
  * solutions to a set of intricate mathematical
  * equations chosen specifically to incentivise
- * owners of Reddcoin to participate in minting.
+ * owners of CashCow to participate in minting.
  * These parameters are also affected by the values
  * assigned to other variables such as expected
  * block confirmation time.
  * If you are merely forking the source code of
- * Reddcoin, it's highly UNLIKELY that this set of
+ * CashCow, it's highly UNLIKELY that this set of
  * parameters work for your purpose. In particular,
  * if you have tweaked the values of other variables,
  * this set of parameters are certainly no longer

@@ -22,5 +22,5 @@
   - Kept <defaultcodec> tags in translations
   - Reverted disabling of CLIENT_VERSION_BUILD in version.h
   - Used the commit from bitcoin repo to update leveldb to 1.15
-  - Updated the addresses in Qt tests to a valid RDD address
+  - Updated the addresses in Qt tests to a valid COW address
   - Renamed litecoin.icns to reddcoin.icns according to config file
