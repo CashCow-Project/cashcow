@@ -250,9 +250,9 @@ public:
 };
 
 /** base58-encoded Bitcoin addresses.
- * Public-key-hash-addresses have version 61 (or 111 testnet).
+ * Public-key-hash-addresses have version 28 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
- * Script-hash-addresses have version 5 (or 196 testnet).
+ * Script-hash-addresses have version 87 (or 196 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
 class CBitcoinAddress;
@@ -272,8 +272,8 @@ class CBitcoinAddress : public CBase58Data
 public:
     enum
     {
-        PUBKEY_ADDRESS = 61, // CashCow addresses start with R
-        SCRIPT_ADDRESS = 5,
+        PUBKEY_ADDRESS = 28, // CashCow addresses start with C
+        SCRIPT_ADDRESS = 87,
         PUBKEY_ADDRESS_TEST = 111,
         SCRIPT_ADDRESS_TEST = 196,
     };
