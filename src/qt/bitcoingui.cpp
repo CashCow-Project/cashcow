@@ -99,6 +99,11 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
 
     // Create system tray icon and notification
     createTrayIcon();
+    
+    // Stylesheet
+    QFile style(":/styles/res/stylesheets/walletstyle.qss");
+    style.open(QFile::ReadOnly);
+    setStyleSheet(QString::fromUtf8(style.readAll()));
 
     // Create status bar
     statusBar();
@@ -276,6 +281,11 @@ void BitcoinGUI::createActions()
     connect(lockWalletAction, SIGNAL(triggered()), walletFrame, SLOT(lockWallet()));
     connect(signMessageAction, SIGNAL(triggered()), this, SLOT(gotoSignMessageTab()));
     connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
+}
+
+void BitcoinGUI::changeStyleSheet()
+{
+    setStyleSheet(QInputDialog::getText(this, "Change Stylesheet", "Sheet", QLineEdit::Normal, styleSheet()));
 }
 
 void BitcoinGUI::createMenuBar()
