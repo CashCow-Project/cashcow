@@ -1,7 +1,8 @@
 TEMPLATE = app
 TARGET = cashcow-qt
 macx:TARGET = "CashCow-Qt"
-VERSION = 1.3.1.2
+# from Reddcoin version 1.3.1.2
+VERSION = 0.1.0.0
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
