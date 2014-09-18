@@ -66,8 +66,7 @@ static const int COINBASE_MATURITY = 30; // 36 minutes
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */
 static const int MAX_SCRIPTCHECK_THREADS = 16;
-/** Start checking POW after block 44877 http://cryptexplorer.com/block/4253e7618d40aded00d11b664e874245ae74d55b976f4ac087d1a9db2f5f3cda */
-static const int64 CHECK_POW_FROM_NTIME = 1394048078;
+
 #ifdef USE_UPNP
 static const int fHaveUPnP = true;
 #else
@@ -1645,7 +1644,7 @@ public:
         }
 
         // Check the header
-        if (GetBlockTime() > CHECK_POW_FROM_NTIME && IsProofOfWork() && !CheckProofOfWork(GetPoWHash(), nBits))
+        if (IsProofOfWork() && !CheckProofOfWork(GetPoWHash(), nBits))
             return error("CBlock::ReadFromDisk() : errors in block header");
 
         return true;
