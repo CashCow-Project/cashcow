@@ -304,7 +304,7 @@ std::string HelpMessage()
         "  -?                     " + _("This help message") + "\n" +
         "  -conf=<file>           " + _("Specify configuration file (default: cashcow.conf)") + "\n" +
         "  -pid=<file>            " + _("Specify pid file (default: cashcowd.pid)") + "\n" +
-        "  -staking               " + _("Stake your coins to support network and gain reward (default: 1)") + "\n" +
+        "  -staking               " + _("Milk your coins to support network and gain reward (default: 1)") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
         "  -dbcache=<n>           " + _("Set database cache size in megabytes (default: 25)") + "\n" +
         "  -timeout=<n>           " + _("Specify connection timeout in milliseconds (default: 5000)") + "\n" +

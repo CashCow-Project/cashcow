@@ -1808,7 +1808,7 @@ string CWallet::SendMoney(CScript scriptPubKey, int64 nValue, CWalletTx& wtxNew,
     }
     if (fWalletUnlockStakingOnly)
     {
-        strError = _("Error: Wallet unlocked for staking only, unable to create transaction.");
+        strError = _("Error: Wallet unlocked for milking only, unable to create transaction.");
         printf("SendMoney() : %s", strError.c_str());
         return strError;
     }
@@ -1906,7 +1906,7 @@ void CWallet::PrintWallet(const CBlock& block)
         else if (block.IsProofOfStake() && mapWallet.count(block.vtx[1].GetHash()))
         {
             CWalletTx& wtx = mapWallet[block.vtx[1].GetHash()];
-            printf("    stake: %d  %d  %"PRI64d"", wtx.GetDepthInMainChain(), wtx.GetBlocksToMaturity(), wtx.GetCredit());
+            printf("    steak: %d  %d  %"PRI64d"", wtx.GetDepthInMainChain(), wtx.GetBlocksToMaturity(), wtx.GetCredit());
         }
     }
     printf("\n");

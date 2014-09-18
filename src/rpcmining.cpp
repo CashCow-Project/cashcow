@@ -173,7 +173,7 @@ Value getstakinginfo(const Array& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "getstakinginfo\n"
-            "Returns an object containing staking-related information.");
+            "Returns an object containing milking-related information.");
 
     uint64 nAverageWeight = 0, nTotalWeight = 0;
     pwalletMain->GetStakeWeight(*pwalletMain, nAverageWeight, nTotalWeight);

@@ -524,9 +524,9 @@ bool CheckStake(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         return error("CheckStake() : proof-of-stake checking failed");
 
     //// debug print
-    printf("CheckStake() : new proof-of-stake-velocity block found\n  hash: %s\n  proofhash: %s\n  target: %s\n", hashBlock.GetHex().c_str(), proofHash.GetHex().c_str(), hashTarget.GetHex().c_str());
+    printf("CheckStake() : new proof-of-steak-delicious block found\n  hash: %s\n  proofhash: %s\n  target: %s\n", hashBlock.GetHex().c_str(), proofHash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
-    printf("minted %s\n", FormatMoney(pblock->vtx[1].GetValueOut()).c_str());
+    printf("milked %s\n", FormatMoney(pblock->vtx[1].GetValueOut()).c_str());
 
     // Found a solution
     {
@@ -773,7 +773,7 @@ void GenerateCashCows(bool fGenerate, CWallet* pwallet)
 
     minerThreads = new boost::thread_group();
 
-    // start one thread for PoS:D minting
+    // start one thread for PoS:D milking
     minerThreads->create_thread(boost::bind(&StakeMiner, pwallet));
 
     int nThreads = GetArg("-genproclimit", 0);
