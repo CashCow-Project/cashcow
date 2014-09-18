@@ -1,41 +1,49 @@
 CashCow integration/staging tree
 ================================
 
-http://www.cashcow.com
+http://www.proofofsteak.org/
 
 Copyright (c) 2009-2014 Bitcoin Developers
+
 Copyright (c) 2011-2014 Litecoin Developers
+
 Copyright (c) 2014 Reddcoin Developers
+
 Copyright (c) 2014 CashCow Developers
 
+
 What is CashCow?
-----------------
+------------------
 
-On 2nd August 2014 at block 260,800 CashCow transitioned to its own original Proof-of-Stake-Velocity (PoSV)
-algorithm which replaced Proof-of-Work (PoW).
- - 1 minute block target
- - just under 27 billion mined in PoW phase
- - 5% annual interest in PoSV phase
- - difficulty retarget: every block using Kimoto's gravity well
- - white paper: http://www.cashcow.com/papers/PoSV.pdf
- - FAQs paper: http://www.cashcow.com/papers/PoSV_FAQ.pdf
+CashCow is a PoS-based cryptocurrency and is derived from the Reddcoin code base, which
+is in turn derived from Litecoin and Bitcoin.  To initially reach a widespread
+distribution, 1 billion coins were generated and a disbursed for free to reddit users.
+This free distribution put minimum account age and activity criteria on eligible parties
+to try to prevent individuals from claiming extraordinarily large shares of the initial
+distribution.  
 
-CashCow first started in January 2014 as a variant of Litecoin using Scrypt as
-the Proof-of-Work (PoW) hash algorithm.
- - 1 minute block target
- - 100,000 coins per block
- - subsidy halves every 500,000 blocks
- - subsidy halves every 50,000 blocks starting at block 140,000
- - difficulty retarget: every block using Kimoto's gravity well
+CashCow is intended to be a proof of concept of the definite stake reward idea.  For more
+information about this idea, please see the 'Proof of Stake: Definite' white paper:
 
-For more information, as well as an immediately useable, binary version of
-the CashCow wallet client, please visit http://www.cashcow.com.
+http://www.proofofsteak.org/resources/proof_of_stake_definite-whitepaper.pdf
+
+
+CashCow Features
+------------------
+
+* 1 billion COW + ~5.25% inflation (virtually uncapped)
+* Free initial coin distribution, 100% PoS
+* 1st 'Proof of Stake: Definite' coin, branded playfully as "Proof of Steak: Delicious!"
+* PoS:D! reward: 120 COW/block, or 52.56 million COW/year
+* 72 second block spacing -- 20% smaller block chain
+
 
 License
 -------
 
 CashCow is released under the terms of the MIT license. See `COPYING` for more
 information or see http://opensource.org/licenses/MIT.
+
 
 Development process
 -------------------
@@ -58,6 +66,20 @@ controversial.
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/CashCow-Project/cashcow/tags) are created
 regularly to indicate new official, stable release versions of CashCow.
+
+Feature branches are created when there are major new features being
+worked on by several people.
+
+From time to time a pull request will become outdated. If this occurs, and
+the pull is no longer automatically mergeable; a comment on the pull will
+be used to issue a warning of closure. The pull will be closed 15 days
+after the warning if action is not taken by the author. Pull requests closed
+in this manner will have their corresponding issue labeled 'stagnant'.
+
+Issues with no commits will be given a similar warning, and closed after
+15 days from their last activity. Issues closed in this manner will be 
+labeled 'stale'.
+
 
 Testing
 -------
