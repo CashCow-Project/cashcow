@@ -42,7 +42,7 @@ unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
 uint256 hashGenesisBlock("0x");
-uint256 hashGenesisBlockTestNet("0x");
+uint256 hashGenesisBlockTestNet("0xc6c2ce8bb5d79cb52566ec7798532c6c146e0c80002564606b9bb30e6ab6fd69");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // CashCow: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -3294,9 +3294,17 @@ bool InitBlockIndex() {
 
         // Genesis block
         const char* pszTimestamp = "Insert timely string here";
+        unsigned int nTimeGenesis = 1390280400;
+        unsigned int nNonceGenesis = 0;
+        if (fTestNet) {
+            pszTimestamp = "29 Sept 2014 This is the CashCow testnet";
+            nTimeGenesis = 1412021916;
+            nNonceGenesis = 238392;
+        }
+        
         CTransaction txNew;
         txNew.nVersion = 1;
-        txNew.nTime = 1390280400;
+        txNew.nTime = nTimeGenesis;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -3307,22 +3315,24 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime = 1390280400;
+        block.nTime = nTimeGenesis;
         block.nBits = 0x1e0ffff0;
-        block.nNonce = 0;
-
-        if (fTestNet)
-        {
-            txNew.nTime = block.nTime = 1399544585;
-            block.nNonce = 0;
-        }
+        block.nNonce = nNonceGenesis;
 
         //// debug print
         uint256 hash = block.GetHash();
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x"));
+        
+        if (fTestNet) {
+            // Test-net merkle root:
+            assert(block.hashMerkleRoot == uint256("0xc2183cb1f534335d9a9688121dd7310b6df9e3af6fd611ad390090fbecbb7530"));
+        } else {
+            // Main-net merkle root:
+            assert(block.hashMerkleRoot == uint256("0x"));
+        }
+        
         block.print();
         assert(hash == hashGenesisBlock);
 
