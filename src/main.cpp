@@ -42,7 +42,7 @@ unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
 uint256 hashGenesisBlock("0x");
-uint256 hashGenesisBlockTestNet("0xc6c2ce8bb5d79cb52566ec7798532c6c146e0c80002564606b9bb30e6ab6fd69");
+uint256 hashGenesisBlockTestNet("0xedbbda7b523b7d714bfa83176ddeb5e527110bacd8cd8a3be6f51827059ba3a7");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // CashCow: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -3297,9 +3297,9 @@ bool InitBlockIndex() {
         unsigned int nTimeGenesis = 1390280400;
         unsigned int nNonceGenesis = 0;
         if (fTestNet) {
-            pszTimestamp = "29 Sept 2014 This is the CashCow testnet";
-            nTimeGenesis = 1412021916;
-            nNonceGenesis = 238392;
+            pszTimestamp = "30 Sept 2014 This is the CashCow testnet";
+            nTimeGenesis = 1412094661;
+            nNonceGenesis = 5952704;
         }
         
         CTransaction txNew;
@@ -3327,7 +3327,7 @@ bool InitBlockIndex() {
         
         if (fTestNet) {
             // Test-net merkle root:
-            assert(block.hashMerkleRoot == uint256("0xc2183cb1f534335d9a9688121dd7310b6df9e3af6fd611ad390090fbecbb7530"));
+            assert(block.hashMerkleRoot == uint256("0xf15a12f20d822a2443d68eca0fdf11734458ea5048fc74b33c8f89a32b8c6659"));
         } else {
             // Main-net merkle root:
             assert(block.hashMerkleRoot == uint256("0x"));
