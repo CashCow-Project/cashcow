@@ -1125,9 +1125,9 @@ int64 GetProofOfWorkReward(int nHeight, int64 nFees)
     if (nHeight == 0) {
         // Genesis Block
         nSubsidy = 0;
-    } else if (nHeight < 5) {
-        // Free Distribution Coins: 250 million COW per block, 4 blocks.
-        250000000 * COIN;
+    } else if (nHeight <= 10) {
+        // Free Distribution Coins: 100 million COW per block, 10 blocks.
+        nSubsidy = 100000000 * COIN;
     }
 
     return nSubsidy + nFees;
