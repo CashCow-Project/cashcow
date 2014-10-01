@@ -112,7 +112,7 @@ Release Process
  From the build directory created above
 
 	export SIGNER=(your PGP key used for gitian)
-	export VERSION=0.1.0.0
+	export VERSION=0.8.0.0
 	cd ../gitian-builder
 
  Build cashcowd and cashcow-qt on Linux32, Linux64:
@@ -153,7 +153,7 @@ Release Process
 
  From the gitian-builder directory created above
 
-	export VERSION=0.1.0.0
+	export VERSION=0.8.0.0
 	mkdir cashcow-${VERSION}-linux-gitian
 	pushd cashcow-${VERSION}-linux-gitian
 	unzip ../cashcow-${VERSION}-linux-gitian.zip
