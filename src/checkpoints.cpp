@@ -436,7 +436,7 @@ namespace Checkpoints
 }
 
 // CashCow: sync-checkpoint master key
-const std::string CSyncCheckpoint::strMasterPubKey = "0437b4b0f5d356f205c17ffff6c46dc9ec4680ffb7f8a9a4e6eebcebd5f340d01df00ef304faea7779d97d8f1addbe1e87308ea237aae3ead96e0a736c7e9477a1";
+const std::string CSyncCheckpoint::strMasterPubKey = "0412427d4c9588eafd65e21f2526127c2818ddbc7daac5b8277ccdb98e935bc78f6bbb12aef5f433b22e9d36fc721403407aca9a86270baf553dc82b7545199332";
 
 std::string CSyncCheckpoint::strMasterPrivKey = "";
 
